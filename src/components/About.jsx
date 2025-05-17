@@ -1,28 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const [profileImage, setProfileImage] = useState('/assets/images/profile.jpg');
-
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      if (!file.type.startsWith('image/')) {
-        alert('Please select an image file');
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setProfileImage(e.target.result);
-      };
-      reader.onerror = () => {
-        console.error('Error reading file');
-        alert('Error reading file. Please try again.');
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  const profileImage = '/assets/images/profile.jpg';
 
   const skills = {
     'Programming & Scripting': {
@@ -147,7 +127,7 @@ const About = () => {
         </motion.h2>
         <div className="max-w-4xl mx-auto backdrop-blur-sm bg-gray-800/30 rounded-2xl p-8 shadow-2xl border border-gray-700/50">
           <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-            {/* Container for Photo and Button */}
+            {/* Container for Photo */}
             <div className="flex flex-col items-center gap-4">
               {/* Profile Photo */}
               <motion.div
@@ -167,27 +147,10 @@ const About = () => {
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     console.error('Error loading image');
-                    e.target.src = '/assets/images/profile.jpg'; // Fallback to default image
+                    e.target.src = '/assets/images/profile.jpg';
                   }}
                 />
               </motion.div>
-
-              {/* Change Photo Button */}
-              <motion.label 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                className="cursor-pointer px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full text-sm font-medium hover:from-purple-600 hover:to-indigo-600 transition-colors duration-300"
-              >
-                Change Photo
-                <input 
-                  type="file" 
-                  accept="image/*"
-                  className="hidden" 
-                  onChange={handleImageChange}
-                />
-              </motion.label>
             </div>
             
             {/* Professional Summary */}
