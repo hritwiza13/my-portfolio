@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  // Use the default image path directly
-  const profileImage = process.env.PUBLIC_URL + '/assets/images/profile.jpg';
+  const [profileImage, setProfileImage] = useState(process.env.PUBLIC_URL + '/assets/images/profile.jpg');
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfileImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   const skills = {
     'Programming & Scripting': {
@@ -128,7 +138,7 @@ const About = () => {
         </motion.h2>
         <div className="max-w-4xl mx-auto backdrop-blur-sm bg-gray-800/30 rounded-2xl p-8 shadow-2xl border border-gray-700/50">
           <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-            {/* Container for Photo */}
+            {/* Container for Photo and Button */}
             <div className="flex flex-col items-center gap-4">
               {/* Profile Photo */}
               <motion.div
@@ -148,6 +158,23 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
+
+              {/* Change Photo Button */}
+              <motion.label 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                className="cursor-pointer px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full text-sm font-medium hover:from-purple-600 hover:to-indigo-600 transition-colors duration-300"
+              >
+                Change Photo
+                <input 
+                  type="file" 
+                  accept="image/*" 
+                  className="hidden" 
+                  onChange={handleImageChange}
+                />
+              </motion.label>
             </div>
             
             {/* Professional Summary */}
