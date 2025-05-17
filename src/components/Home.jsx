@@ -47,32 +47,6 @@ const Home = () => {
         >
           Software Engineer | Data Science Specialist | AI/ML Enthusiast
         </motion.p>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="flex justify-center space-x-4 mb-8"
-        >
-          <motion.a
-            href="mailto:erhritwizagupta13@gmail.com"
-            whileHover={{ scale: 1.05, color: "#22d3ee" }}
-            whileTap={{ scale: 0.95 }}
-            className="text-gray-300 hover:text-cyan-400 transition-colors"
-          >
-            erhritwizagupta13@gmail.com
-          </motion.a>
-          <span className="text-gray-500">|</span>
-          <motion.a
-            href="https://www.linkedin.com/in/hritwizaguptakvp/"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05, color: "#22d3ee" }}
-            whileTap={{ scale: 0.95 }}
-            className="text-gray-300 hover:text-cyan-400 transition-colors"
-          >
-            LinkedIn
-          </motion.a>
-        </motion.div>
         <motion.a
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
