@@ -2,14 +2,23 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const [profileImage, setProfileImage] = useState(process.env.PUBLIC_URL + '/assets/images/profile.jpg');
+  const [profileImage, setProfileImage] = useState('/assets/images/profile.jpg');
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
+      if (!file.type.startsWith('image/')) {
+        alert('Please select an image file');
+        return;
+      }
+
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setProfileImage(reader.result);
+      reader.onload = (e) => {
+        setProfileImage(e.target.result);
+      };
+      reader.onerror = () => {
+        console.error('Error reading file');
+        alert('Error reading file. Please try again.');
       };
       reader.readAsDataURL(file);
     }
@@ -156,6 +165,10 @@ const About = () => {
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    console.error('Error loading image');
+                    e.target.src = '/assets/images/profile.jpg'; // Fallback to default image
+                  }}
                 />
               </motion.div>
 
@@ -170,7 +183,7 @@ const About = () => {
                 Change Photo
                 <input 
                   type="file" 
-                  accept="image/*" 
+                  accept="image/*"
                   className="hidden" 
                   onChange={handleImageChange}
                 />
