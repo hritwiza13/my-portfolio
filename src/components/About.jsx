@@ -1,33 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  // Check local storage for a saved image on component mount
-  const defaultImagePath = '/assets/images/profile.jpg';
-
-  const [profileImage, setProfileImage] = useState(
-    localStorage.getItem('profileImage') || defaultImagePath
-  );
-
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const imageDataUrl = reader.result;
-        setProfileImage(imageDataUrl);
-        // Save the image data URL to local storage
-        localStorage.setItem('profileImage', imageDataUrl);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  // Optional: Clear the saved image from local storage
-  const handleClearImage = () => {
-    localStorage.removeItem('profileImage');
-    setProfileImage(defaultImagePath); // Revert to the default image path
-  };
+  // Use the default image path directly
+  const profileImage = process.env.PUBLIC_URL + '/assets/images/profile.jpg';
 
   const skills = {
     'Programming & Scripting': {
@@ -133,16 +109,16 @@ const About = () => {
           whileInView={{
             opacity: 1, 
             y: 0,
-            backgroundPosition: ['0% 50%', '100% 50%'] // Animate gradient position
+            backgroundPosition: ['0% 50%', '100% 50%']
           }}
           viewport={{ once: true }}
           transition={{
             duration: 0.8, 
             ease: "easeOut",
-            backgroundPosition: { // Animation specifically for backgroundPosition
+            backgroundPosition: {
               repeat: Infinity, 
               repeatType: "mirror", 
-              duration: 5, // Duration of the gradient shift cycle
+              duration: 5,
               ease: "linear"
             }
           }}
@@ -152,7 +128,7 @@ const About = () => {
         </motion.h2>
         <div className="max-w-4xl mx-auto backdrop-blur-sm bg-gray-800/30 rounded-2xl p-8 shadow-2xl border border-gray-700/50">
           <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-            {/* Container for Photo and Button */}
+            {/* Container for Photo */}
             <div className="flex flex-col items-center gap-4">
               {/* Profile Photo */}
               <motion.div
@@ -172,37 +148,6 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-
-              {/* File Input for Changing Photo */}
-              <motion.label 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                className="cursor-pointer px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full text-sm font-medium hover:from-purple-600 hover:to-indigo-600 transition-colors duration-300"
-              >
-                Change Photo
-                <input 
-                  type="file" 
-                  accept="image/*" 
-                  className="hidden" 
-                  onChange={handleImageChange}
-                />
-              </motion.label>
-
-              {/* Optional: Button to clear saved image */}
-              {profileImage !== defaultImagePath && (
-                <motion.button 
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                  onClick={handleClearImage}
-                  className="cursor-pointer px-4 py-2 bg-gray-700 text-white rounded-full text-sm font-medium hover:bg-gray-600 transition-colors duration-300"
-                >
-                  Clear Photo
-                </motion.button>
-              )}
             </div>
             
             {/* Professional Summary */}
