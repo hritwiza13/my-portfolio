@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-90 backdrop-blur-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href={null} className="text-cyan-400 text-xl font-bold">Portfolio</a>
+          <button type="button" className="text-cyan-400 text-xl font-bold" onClick={() => window.scrollTo(0, 0)}>Portfolio</button>
           
           {/* Mobile menu button */}
           <button
