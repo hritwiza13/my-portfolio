@@ -122,9 +122,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-### ✅ Next Step:
-- Copy and paste this content into a `README.md` file inside your `my-portfolio` GitHub repository root directory.
-- Make sure your **resume PDF** is saved in `public/assets/` and matches the filename used in the README.
 
-Would you like a matching `LICENSE` file (MIT or other) added as well?
-```
