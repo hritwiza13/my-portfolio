@@ -50,17 +50,6 @@ const Contact = () => {
           // transition={{ duration: 0.8, ease: "easeOut" }} // Removed, handled by containerVariants
           className="max-w-2xl mx-auto backdrop-blur-sm bg-gray-800/30 rounded-2xl p-8 shadow-2xl border border-gray-700/50"
         >
-          <motion.div 
-            variants={itemVariants} // Animate this div as an item
-            className="text-center mb-12"
-          >
-            <p className="text-gray-300 mb-4">
-              Location: Panna, Madhya Pradesh, India
-            </p>
-            <p className="text-gray-300 mb-4">
-              Email: <a href="mailto:erhritwizagupta13@gmail.com" className="text-cyan-400 hover:text-cyan-300">erhritwizagupta13@gmail.com</a>
-            </p>
-          </motion.div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <motion.div variants={itemVariants}> {/* Animate this form group */}
               <label htmlFor="name" className="block text-white mb-2">
