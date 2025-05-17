@@ -194,7 +194,7 @@ const About = () => {
                 >
                   <div className="flex items-center mb-4">
                     <motion.div
-                      className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-2 mr-4"
+                      className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 p-2 mr-4"
                       variants={iconVariants}
                       whileHover="hover"
                     >
