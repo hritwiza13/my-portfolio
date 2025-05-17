@@ -12,7 +12,7 @@ const Navbar = () => {
             <a href="#projects" className="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
             <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
             <a
-              href="/Hritwiza_Gupta.pdf" // Link to the correct resume file
+              href="/my-portfolio/Hritwiza_Gupta.pdf" // Link to the correct resume file for GitHub Pages
               download
               className="px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full font-medium hover:from-purple-600 hover:to-indigo-600 transition-colors duration-300"
             >
