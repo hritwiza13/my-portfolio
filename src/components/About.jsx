@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const profileImage = '/assets/images/WhatsApp Image 2024-07-29 at 23.09.42_89dc6e65.jpg';
+  const profileImage = process.env.PUBLIC_URL + '/assets/images/WhatsApp Image 2024-07-29 at 23.09.42_89dc6e65.jpg';
 
   const skills = {
     'Programming & Scripting': {
