@@ -6,25 +6,25 @@ const Education = () => {
     {
       degree: "B.Tech in Computer Science & Engineering",
       institution: "Mody University",
-      year: "2020 - 2024",
+      year: "2022 - 2025",
       details: "Currently pursuing with focus on AI/ML and Web Development"
     },
     {
       degree: "Diploma in Computer Science",
       institution: "Govt. Polytechnic Panna",
-      year: "2017 - 2020",
+      year: "2019 - 2022",
       details: "Completed with focus on Computer Science and Engineering"
     },
     {
       degree: "12th Grade",
       institution: "NIOS School",
-      year: "2016 - 2017",
+      year: "2018 - 2019",
       details: "Completed from National Institute of Open Schooling (NIOS) Board with focus on Science and Mathematics"
     },
     {
       degree: "10th Grade",
       institution: "NIOS School",
-      year: "2014 - 2015",
+      year: "2020 - 2021",
       details: "Completed from National Institute of Open Schooling (NIOS) Board with distinction"
     }
   ];
