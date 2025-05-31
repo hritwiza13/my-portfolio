@@ -45,7 +45,7 @@ const Home = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-xl text-gray-300 mb-8"
         >
-          Software Engineer | Data Science Specialist | AI/ML Enthusiast
+          Software Engineer | AI/ML Specialist | Full Stack Developer
         </motion.p>
         <motion.a
           initial={{ opacity: 0, scale: 0.8 }}
