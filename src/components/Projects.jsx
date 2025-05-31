@@ -88,10 +88,30 @@ const projectSections = {
     title: "Blockchain",
     description: "Decentralized applications and smart contracts",
     icon: "⛓️"
+  },
+  analytics: {
+    title: "Data Analytics",
+    description: "Business intelligence and data analysis solutions",
+    icon: "📊"
   }
 };
 
 const projects = [
+  {
+    title: "AI Fashion Stylist",
+    description: "Developed an intelligent fashion recommendation system using computer vision and machine learning. The app analyzes user preferences, body type, and current trends to provide personalized outfit recommendations.",
+    technologies: ["Python", "TensorFlow", "Computer Vision", "React Native", "Node.js"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "ai",
+    github: "https://github.com/hritwiza13/ai-fashion-stylist",
+    demo: "https://ai-fashion-stylist-demo.com",
+    features: [
+      "Personalized Outfit Recommendations",
+      "Style Analysis & Trend Detection",
+      "Virtual Try-on Technology",
+      "Seasonal Wardrobe Planning"
+    ]
+  },
   {
     title: "AI-Powered HR Chatbot",
     description: "Developed an intelligent HR chatbot using IBM Watson AI services for automated task handling and employee support. Implemented NLP capabilities for natural language understanding and response generation.",
@@ -99,7 +119,13 @@ const projects = [
     image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
     category: "ai",
     github: "https://github.com/hritwiza13/hr-chatbot",
-    demo: "https://hr-chatbot-demo.com"
+    demo: "https://hr-chatbot-demo.com",
+    features: [
+      "Natural Language Processing",
+      "Automated Task Handling",
+      "Employee Support System",
+      "Real-time Response Generation"
+    ]
   },
   {
     title: "Cognitive Fraud Detection System",
@@ -163,6 +189,138 @@ const projects = [
     category: "web",
     github: "https://github.com/hritwiza13/matrimony-platform",
     demo: "https://matrimony-platform-demo.com"
+  },
+  {
+    title: "Smart Home Automation System",
+    description: "Developed an IoT-based home automation system with real-time monitoring and control capabilities. Implemented secure API endpoints and mobile app integration.",
+    technologies: ["Python", "REST APIs", "IoT", "Embedded Systems"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "system",
+    github: "https://github.com/hritwiza13/smart-home",
+    demo: "https://smart-home-demo.com",
+    features: [
+      "Real-time Monitoring",
+      "Secure API Integration",
+      "Mobile App Control",
+      "Automated Device Management"
+    ]
+  },
+  {
+    title: "Cloud-Native Microservices Platform",
+    description: "Built a scalable microservices architecture using Docker and Kubernetes. Implemented CI/CD pipelines and automated deployment workflows.",
+    technologies: ["Docker", "Kubernetes", "AWS", "Jenkins"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "cloud",
+    github: "https://github.com/hritwiza13/microservices-platform",
+    demo: "https://microservices-demo.com",
+    features: [
+      "Container Orchestration",
+      "CI/CD Pipeline",
+      "Automated Deployment",
+      "Scalable Architecture"
+    ]
+  },
+  {
+    title: "Real-time Data Analytics Dashboard",
+    description: "Created a comprehensive analytics dashboard for real-time data visualization and monitoring. Integrated multiple data sources and implemented advanced filtering.",
+    technologies: ["React.js", "Node.js", "MongoDB", "Power BI"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "web",
+    github: "https://github.com/hritwiza13/analytics-dashboard",
+    demo: "https://analytics-demo.com"
+  },
+  {
+    title: "Predictive Maintenance System",
+    description: "Developed an ML-based system for predicting equipment maintenance needs. Implemented data collection, processing, and visualization components.",
+    technologies: ["Python", "Machine Learning", "TensorFlow", "Data Analysis"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "ai",
+    github: "https://github.com/hritwiza13/predictive-maintenance",
+    demo: "https://maintenance-demo.com"
+  },
+  {
+    title: "Secure API Gateway",
+    description: "Built a secure API gateway with authentication, rate limiting, and request validation. Implemented monitoring and logging features.",
+    technologies: ["Node.js", "Express.js", "JWT", "Redis"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "system",
+    github: "https://github.com/hritwiza13/api-gateway",
+    demo: "https://api-gateway-demo.com"
+  },
+  {
+    title: "Business Intelligence Dashboard",
+    description: "Developed a comprehensive BI dashboard for sales and marketing analytics. Implemented interactive visualizations, KPI tracking, and automated reporting features.",
+    technologies: ["Power BI", "SQL", "Python", "Data Visualization"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "analytics",
+    github: "https://github.com/hritwiza13/bi-dashboard",
+    demo: "https://bi-dashboard-demo.com",
+    features: [
+      "Interactive Visualizations",
+      "KPI Tracking",
+      "Automated Reporting",
+      "Real-time Analytics"
+    ]
+  },
+  {
+    title: "Customer Behavior Analysis Platform",
+    description: "Built a data analytics platform for analyzing customer behavior patterns. Implemented segmentation, trend analysis, and predictive modeling for customer insights.",
+    technologies: ["Python", "Pandas", "Scikit-learn", "Tableau"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "analytics",
+    github: "https://github.com/hritwiza13/customer-analytics",
+    demo: "https://customer-analytics-demo.com",
+    features: [
+      "Customer Segmentation",
+      "Trend Analysis",
+      "Predictive Modeling",
+      "Behavioral Insights"
+    ]
+  },
+  {
+    title: "Supply Chain Analytics System",
+    description: "Created an analytics system for supply chain optimization. Implemented inventory forecasting, route optimization, and demand prediction models.",
+    technologies: ["Python", "Machine Learning", "SQL", "Data Analysis"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "analytics",
+    github: "https://github.com/hritwiza13/supply-chain-analytics",
+    demo: "https://supply-chain-demo.com",
+    features: [
+      "Inventory Forecasting",
+      "Route Optimization",
+      "Demand Prediction",
+      "Supply Chain Analytics"
+    ]
+  },
+  {
+    title: "Financial Market Analysis Tool",
+    description: "Developed a tool for analyzing financial market trends and patterns. Implemented real-time data processing, technical indicators, and risk assessment models.",
+    technologies: ["Python", "Pandas", "NumPy", "Data Visualization"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "analytics",
+    github: "https://github.com/hritwiza13/market-analysis",
+    demo: "https://market-analysis-demo.com",
+    features: [
+      "Real-time Data Processing",
+      "Technical Indicators",
+      "Risk Assessment",
+      "Market Trend Analysis"
+    ]
+  },
+  {
+    title: "Healthcare Analytics Platform",
+    description: "Built a platform for healthcare data analysis and patient outcome prediction. Implemented data integration, statistical analysis, and visualization components.",
+    technologies: ["Python", "R", "SQL", "Machine Learning"],
+    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    category: "analytics",
+    github: "https://github.com/hritwiza13/healthcare-analytics",
+    demo: "https://healthcare-analytics-demo.com",
+    features: [
+      "Patient Outcome Prediction",
+      "Data Integration",
+      "Statistical Analysis",
+      "Healthcare Visualization"
+    ]
   }
 ];
 
