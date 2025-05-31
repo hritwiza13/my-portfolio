@@ -7,7 +7,7 @@ const Education = () => {
       degree: "B.Tech in Computer Science & Engineering",
       institution: "Mody University",
       year: "2022 - 2025",
-      details: "Currently pursuing with focus on AI/ML and Web Development"
+      details: "Pursuing graduation in Computer Science and Engineering with focus on AI/ML and Web Development"
     },
     {
       degree: "Diploma in Computer Science",
@@ -19,7 +19,7 @@ const Education = () => {
       degree: "12th Grade",
       institution: "NIOS School",
       year: "2018 - 2019",
-      details: "Completed from National Institute of Open Schooling (NIOS) Board with focus on Science and Mathematics"
+      details: "Completed from National Institute of Open Schooling (NIOS) Board with focus on Physics, Chemistry, Mathematics, and Biology (PCMB)"
     },
     {
       degree: "10th Grade",
