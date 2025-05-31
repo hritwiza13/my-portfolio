@@ -8,6 +8,7 @@ import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Languages from './components/Languages';
 
 const particleParams = {
   particles: {
@@ -49,6 +50,7 @@ function App() {
         <Home />
         <About />
         <Education />
+        <Languages />
         <Certifications />
         <Projects />
         <Contact />

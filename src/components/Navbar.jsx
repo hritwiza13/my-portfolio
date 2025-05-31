@@ -1,6 +1,6 @@
 // Ensure latest changes are picked up by workflow
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +35,8 @@ const Navbar = () => {
             <a href="#home" className="text-gray-300 hover:text-cyan-400 transition-colors">Home</a>
             <a href="#about" className="text-gray-300 hover:text-cyan-400 transition-colors">About</a>
             <a href="#education" className="text-gray-300 hover:text-cyan-400 transition-colors">Education</a>
+            <a href="#languages" className="text-gray-300 hover:text-cyan-400 transition-colors">Languages</a>
+            <a href="#certifications" className="text-gray-300 hover:text-cyan-400 transition-colors">Certifications</a>
             <a href="#projects" className="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
             <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
             <a
@@ -48,29 +50,32 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu dropdown */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-md shadow-lg mt-2"
-          >
-            <a href="#home" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Home</a>
-            <a href="#about" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">About</a>
-            <a href="#education" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Education</a>
-            <a href="#certifications" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Certifications</a>
-            <a href="#projects" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Projects</a>
-            <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Contact</a>
-            <a
-              href="/my-portfolio/Hritwiza_Gupta.pdf" // Link to the correct resume file for GitHub Pages
-              download
-              className="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-600 hover:to-indigo-600 transition-colors duration-300"
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-md shadow-lg mt-2"
             >
-              Resume
-            </a>
-          </motion.div>
-        )}
+              <a href="#home" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Home</a>
+              <a href="#about" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">About</a>
+              <a href="#education" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Education</a>
+              <a href="#languages" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Languages</a>
+              <a href="#certifications" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Certifications</a>
+              <a href="#projects" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Projects</a>
+              <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Contact</a>
+              <a
+                href="/my-portfolio/Hritwiza_Gupta.pdf" // Link to the correct resume file for GitHub Pages
+                download
+                className="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-purple-600 hover:to-indigo-600 transition-colors duration-300"
+              >
+                Resume
+              </a>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
