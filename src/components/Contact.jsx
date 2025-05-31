@@ -42,12 +42,32 @@ const Contact = () => {
         >
           Get in Touch
         </motion.h2>
+
+        <motion.div 
+          variants={itemVariants} // Animate this div as an item
+          className="mb-8 flex justify-center space-x-6"
+        >
+          <a
+            href="https://www.linkedin.com/in/hritwizaguptakvp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-cyan-400 transition-colors text-lg"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="mailto:erhritwizagupta13@gmail.com"
+            className="text-gray-400 hover:text-cyan-400 transition-colors text-lg"
+          >
+            Email
+          </a>
+        </motion.div>
+
         <motion.div 
           variants={containerVariants} // Use container variants
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          // transition={{ duration: 0.8, ease: "easeOut" }} // Removed, handled by containerVariants
           className="max-w-2xl mx-auto backdrop-blur-sm bg-gray-800/30 rounded-2xl p-8 shadow-2xl border border-gray-700/50"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -92,25 +112,6 @@ const Contact = () => {
               Send Message
             </motion.button>
           </form>
-          <motion.div 
-            variants={itemVariants} // Animate this div as an item
-            className="mt-12 flex justify-center space-x-6"
-          >
-            <a
-              href="https://www.linkedin.com/in/hritwizaguptakvp/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:erhritwizagupta13@gmail.com"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
-            >
-              Email
-            </a>
-          </motion.div>
         </motion.div>
       </div>
     </section>
