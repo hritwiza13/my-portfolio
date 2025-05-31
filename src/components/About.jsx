@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaStar } from 'react-icons/fa';
 
 const About = () => {
   const profileImage = process.env.PUBLIC_URL + '/assets/images/WhatsApp Image 2024-07-29 at 23.09.42_89dc6e65.jpg';
@@ -31,6 +30,25 @@ const About = () => {
       icon: 'https://cdn-icons-png.flaticon.com/512/2103/2103633.png'
     }
   };
+
+  const languagesData = [
+    {
+      name: "English",
+      proficiency: "Fluent"
+    },
+    {
+      name: "Hindi",
+      proficiency: "Fluent"
+    },
+    {
+      name: "Arabic",
+      proficiency: "Beginner"
+    },
+    {
+      name: "Japanese",
+      proficiency: "Beginner"
+    }
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -91,13 +109,6 @@ const About = () => {
       }
     }
   };
-
-  const languages = [
-    { name: "English", proficiency: "Fluent" },
-    { name: "Hindi", proficiency: "Fluent" },
-    { name: "Arabic", proficiency: "Beginner" },
-    { name: "Japanese", proficiency: "Beginner" }
-  ];
 
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
@@ -241,25 +252,40 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Languages Section - Added Here */}
-          <motion.div
-            variants={itemVariants}
-            viewport={{ once: true, amount: 0.3 }}
+          {/* Languages Section */}
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500 mb-6 flex items-center gap-3">
-              <FaStar className="text-green-400" /> Languages
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {languages.map((lang, index) => (
-                <span
+            <motion.h3 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500 mb-6"
+            >
+              Languages
+            </motion.h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {languagesData.map((lang, index) => (
+                <motion.div
                   key={index}
-                  className="px-4 py-2 bg-gray-700/50 text-gray-200 rounded-full text-sm font-medium backdrop-blur-sm border border-gray-600/50"
+                  variants={itemVariants}
+                  className="backdrop-blur-sm bg-gray-800/30 rounded-xl p-6 shadow-lg border border-gray-700/50 hover:border-green-500/50 transition-colors duration-300"
+                  whileHover={{ x: 10, y: -5 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  {lang.name} ({lang.proficiency})
-                </span>
+                  <h4 className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500 mb-2">
+                    {lang.name}
+                  </h4>
+                  <p className="text-gray-300">Proficiency: {lang.proficiency}</p>
+                </motion.div>
               ))}
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
