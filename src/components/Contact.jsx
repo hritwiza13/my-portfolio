@@ -43,24 +43,27 @@ const Contact = () => {
           Get in Touch
         </motion.h2>
 
+        {/* LinkedIn and Email Links - Styled as a Card */}
         <motion.div 
           variants={itemVariants} // Animate this div as an item
-          className="mb-8 flex justify-center space-x-6"
+          className="max-w-md mx-auto mb-12 backdrop-blur-sm bg-gray-800/30 rounded-2xl p-6 shadow-2xl border border-gray-700/50"
         >
-          <a
-            href="https://www.linkedin.com/in/hritwizaguptakvp/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyan-400 transition-colors text-lg"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="mailto:erhritwizagupta13@gmail.com"
-            className="text-gray-400 hover:text-cyan-400 transition-colors text-lg"
-          >
-            Email
-          </a>
+          <div className="flex justify-center space-x-6">
+            <a
+              href="https://www.linkedin.com/in/hritwizaguptakvp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-cyan-400 transition-colors text-lg"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:erhritwizagupta13@gmail.com"
+              className="text-gray-400 hover:text-cyan-400 transition-colors text-lg"
+            >
+              Email
+            </a>
+          </div>
         </motion.div>
 
         <motion.div 
