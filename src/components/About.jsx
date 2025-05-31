@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaStar } from 'react-icons/fa';
 
 const About = () => {
   const profileImage = process.env.PUBLIC_URL + '/assets/images/WhatsApp Image 2024-07-29 at 23.09.42_89dc6e65.jpg';
@@ -90,6 +91,13 @@ const About = () => {
       }
     }
   };
+
+  const languages = [
+    { name: "English", proficiency: "Fluent" },
+    { name: "Hindi", proficiency: "Fluent" },
+    { name: "Arabic", proficiency: "Beginner" },
+    { name: "Japanese", proficiency: "Beginner" }
+  ];
 
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
@@ -229,6 +237,26 @@ const About = () => {
                     ))}
                   </div>
                 </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Languages Section - Added Here */}
+          <motion.div
+            variants={itemVariants}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500 mb-6 flex items-center gap-3">
+              <FaStar className="text-green-400" /> Languages
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {languages.map((lang, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-gray-700/50 text-gray-200 rounded-full text-sm font-medium backdrop-blur-sm border border-gray-600/50"
+                >
+                  {lang.name} ({lang.proficiency})
+                </span>
               ))}
             </div>
           </motion.div>
