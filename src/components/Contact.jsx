@@ -43,12 +43,16 @@ const Contact = () => {
           Get in Touch
         </motion.h2>
 
-        {/* LinkedIn and Email Links - Styled as a Card */}
+        {/* Combined Card for Links and Form */}
         <motion.div 
-          variants={itemVariants} // Animate this div as an item
-          className="max-w-md mx-auto mb-12 backdrop-blur-sm bg-gray-800/30 rounded-2xl p-6 shadow-2xl border border-gray-700/50"
+          variants={containerVariants} // Use container variants
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="max-w-2xl mx-auto backdrop-blur-sm bg-gray-800/30 rounded-2xl p-8 shadow-2xl border border-gray-700/50"
         >
-          <div className="flex justify-center space-x-6">
+          {/* LinkedIn and Email Links - Inside the Card */}
+          <div className="flex justify-center space-x-6 mb-8">
             <a
               href="https://www.linkedin.com/in/hritwizaguptakvp/"
               target="_blank"
@@ -64,15 +68,8 @@ const Contact = () => {
               Email
             </a>
           </div>
-        </motion.div>
 
-        <motion.div 
-          variants={containerVariants} // Use container variants
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="max-w-2xl mx-auto backdrop-blur-sm bg-gray-800/30 rounded-2xl p-8 shadow-2xl border border-gray-700/50"
-        >
+          {/* Contact Form - Inside the Card */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <motion.div variants={itemVariants}> {/* Animate this form group */}
               <label htmlFor="name" className="block text-white mb-2">
