@@ -9,10 +9,6 @@ const About = () => {
       items: ['Python', 'Java', 'SQL', 'JavaScript', 'Shell Scripting', 'MATLAB'],
       icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png'
     },
-    'System Design & Architecture': {
-      items: ['Software & Hardware Integration', 'Embedded Systems', 'API Development', 'Microservices'],
-      icon: 'https://cdn-icons-png.flaticon.com/512/2103/2103633.png'
-    },
     'Web Development': {
       items: ['React.js', 'Node.js', 'Express.js', 'REST APIs', 'HTML5', 'CSS3'],
       icon: 'https://cdn-icons-png.flaticon.com/512/2721/2721725.png'
@@ -188,6 +184,33 @@ const About = () => {
               at Mody University, with a track record of successful projects in AI, web development, 
               and system integration.
             </motion.p>
+          </div>
+          {/* Social Links Row */}
+          <div className="flex justify-center space-x-6 mb-8">
+            <a
+              href="https://www.hackerrank.com/profile/hritwizaguptakvp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-green-400 transition-colors text-lg"
+            >
+              HackerRank
+            </a>
+            <a
+              href="https://leetcode.com/u/hritwizaguptakvp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-yellow-400 transition-colors text-lg"
+            >
+              LeetCode
+            </a>
+            <a
+              href="https://www.codechef.com/users/hritwizagupta"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-purple-400 transition-colors text-lg"
+            >
+              CodeChef
+            </a>
           </div>
           <motion.div 
             variants={containerVariants}
