@@ -7,7 +7,6 @@ import About from './components/About';
 import Education from './components/Education';
 import Internships from './components/Internships';
 import Certifications from './components/Certifications';
-import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 const particleParams = {
@@ -52,7 +51,6 @@ function App() {
         <Education />
         <Internships />
         <Certifications />
-        <Projects />
         <Contact />
       </main>
     </div>

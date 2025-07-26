@@ -37,7 +37,6 @@ const Navbar = () => {
             <a href="#education" className="text-gray-300 hover:text-cyan-400 transition-colors">Education</a>
             <a href="#internships" className="text-gray-300 hover:text-cyan-400 transition-colors">Internships</a>
             <a href="#certifications" className="text-gray-300 hover:text-cyan-400 transition-colors">Certifications</a>
-            <a href="#projects" className="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
             <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
             <a
               href="/my-portfolio/Hritwiza_Gupta.pdf" // Link to the correct resume file for GitHub Pages
@@ -64,7 +63,6 @@ const Navbar = () => {
               <a href="#education" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Education</a>
               <a href="#internships" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Internships</a>
               <a href="#certifications" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Certifications</a>
-              <a href="#projects" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Projects</a>
               <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-700">Contact</a>
               <a
                 href="/my-portfolio/Hritwiza_Gupta.pdf" // Link to the correct resume file for GitHub Pages
